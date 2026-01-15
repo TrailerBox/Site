@@ -4,39 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrailerBox Studio | Where Books Become Cinema</title>
+    <meta name="description" content="Premium cinematic book trailers for authors and publishers.">
+    
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
 
     <header>
-        <div class="container nav-flex">
+        <div class="container nav-wrapper">
             <div class="logo">TRAILERBOX <span>STUDIO</span></div>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html" class="btn-nav">Consultation</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn-nav">Book a Consultation</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
             <h1>Where books become <span>cinema.</span></h1>
-            <p>Premium cinematic book trailers crafted for authors and publishers who want their stories seen and felt.</p>
-            <div class="hero-btns">
-                <a href="contact.html" class="btn-gold">Order a Trailer →</a>
-                <a href="portfolio.html" class="btn-outline">View Our Work</a>
+            <p>Premium cinematic book trailers crafted for authors and publishers who want their stories seen, felt, and taken seriously.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn-gold">Order a Book Trailer →</a>
+                <a href="[CALENDAR_LINK]" class="btn-outline">Book a Consultation</a>
             </div>
         </div>
     </section>
 
-    <section class="intro">
-        <div class="container text-center">
+    <section class="intro section">
+        <div class="container small-container text-center">
             <h2 class="serif">"We don't just promote. We interpret."</h2>
-            <p>TrailerBox Studio is a story-first studio dedicated to transforming manuscripts into screen-ready visual experiences.</p>
+            <p class="large-text">TrailerBox Studio is a story-first studio dedicated to transforming manuscripts into screen-ready visual experiences.</p>
         </div>
     </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 TrailerBox Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
