@@ -1,52 +1,34 @@
 :root { --gold: #c5a059; --black: #0a0a0a; --white: #ffffff; }
-
 body, html { margin: 0; padding: 0; background: var(--black); color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
 
-/* SPLASH & NAV */
-#splash-screen { position: fixed; top: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; justify-content: center; align-items: center; }
-#intro-video { width: 100%; max-width: 600px; }
-.navbar { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 50px; z-index: 100; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); box-sizing: border-box; }
+/* Navbar [cite: 2026-01-22] */
+.navbar { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 50px; z-index: 100; box-sizing: border-box; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
 .nav-box { border: 1px solid var(--gold); padding: 0 5px; color: var(--gold); }
 .nav-links { list-style: none; display: flex; gap: 30px; }
 .nav-links a { text-decoration: none; color: white; font-size: 0.8rem; letter-spacing: 2px; }
 
-/* HERO [cite: 2026-01-22] */
+/* Hero & Background [cite: 2026-01-22] */
 .hero-full { position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; }
-.hero-bg-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); z-index: -1; filter: brightness(25%); object-fit: cover; }
-.logo-text { font-size: 3rem; letter-spacing: 10px; margin: 0; }
-.box-frame { border: 3px solid var(--gold); padding: 2px 15px; color: var(--gold); }
-.separator-line { width: 300px; height: 1.5px; background: var(--gold); margin: 20px auto; }
-.studios-label { font-size: 1rem; letter-spacing: 16px; color: var(--gold); padding-left: 16px; }
-.cinema-italic { font-family: 'Playfair Display', serif; font-size: 6rem; color: var(--gold); font-style: italic; }
-.btn-outline, .btn-gold { padding: 15px 40px; text-decoration: none; font-weight: 800; letter-spacing: 2px; margin: 10px; display: inline-block; }
-.btn-gold { background: var(--gold); color: black; }
-.btn-outline { border: 2px solid white; color: white; }
+.hero-bg-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); z-index: -1; filter: brightness(30%); object-fit: cover; }
 
-/* SECTIONS */
-.section-header { padding: 80px 50px 20px; }
-.gold-subtitle { color: var(--gold); font-size: 0.7rem; letter-spacing: 5px; }
-.header-line { width: 50px; height: 2px; background: var(--gold); margin-top: 10px; }
+/* Studio Intro Branding [cite: 2026-01-18] */
+.logo-text { font-size: 3.5rem; letter-spacing: 12px; margin: 0; font-weight: 800; }
+.box-frame { border: 4px solid var(--gold); padding: 5px 20px; color: var(--gold); }
+.separator-line { width: 450px; height: 1.5px; background: var(--gold); margin: 25px auto; }
+.studios-label { font-size: 1.2rem; letter-spacing: 22px; color: var(--gold); padding-left: 22px; margin-top: 10px; font-weight: 400; }
 
-/* PROCESS GRID [cite: 2026-01-22] */
-.process-section { padding: 50px; background: #050505; }
-.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
-.process-box { background: #111; padding: 30px; border-bottom: 2px solid #222; }
-.step-num { font-size: 2.5rem; font-weight: 800; color: rgba(197, 160, 89, 0.1); }
-.process-box h3 { color: var(--gold); letter-spacing: 2px; font-size: 0.9rem; }
+.cinema-italic { font-family: 'Playfair Display', serif; font-size: 6rem; color: var(--gold); font-style: italic; margin: -10px 0 30px; }
+.btn-gold { background: var(--gold); color: black; padding: 15px 40px; text-decoration: none; font-weight: 800; letter-spacing: 2px; margin: 10px; display: inline-block; }
+.btn-outline { border: 2px solid white; color: white; padding: 15px 40px; text-decoration: none; font-weight: 800; letter-spacing: 2px; margin: 10px; display: inline-block; }
 
-/* FOOTER [cite: 2026-01-18, 2026-01-22] */
-.studio-footer { padding: 80px 50px 40px; text-align: center; background: #000; border-top: 1px solid #111; }
-.footer-logo { font-weight: 800; letter-spacing: 3px; margin-bottom: 15px; }
-.footer-line { width: 100px; height: 1px; background: #222; margin: 30px auto; }
-.copyright { font-size: 0.7rem; color: #555; letter-spacing: 1px; }
+/* Process & Footer [cite: 2026-01-22] */
+.process-section { padding: 100px 50px; background: #050505; }
+.gold-subtitle { color: var(--gold); font-size: 0.8rem; letter-spacing: 5px; }
+.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+.process-box { background: #111; padding: 40px; border-bottom: 3px solid #222; }
+.studio-footer { padding: 80px 50px; text-align: center; background: #000; border-top: 1px solid #111; }
+.copyright { font-size: 0.7rem; color: #555; margin-top: 20px; }
 
-/* OTHER STYLES (PORTFOLIO/CONTACT) */
-.portfolio-section { padding: 50px 0; }
-.trailer-slider { display: flex; gap: 20px; overflow-x: auto; padding: 20px 50px; }
-.trailer-card { min-width: 350px; }
-.placeholder-bg { background: #111; aspect-ratio: 16/9; display: flex; justify-content: center; align-items: center; border: 1px solid #222; }
-.status-overlay p { font-weight: 800; font-size: 0.8rem; }
-.tag { font-size: 0.6rem; border: 1px solid rgba(255,255,255,0.2); padding: 2px 8px; margin-bottom: 10px; display: inline-block; }
-.contact-section { padding: 100px 50px; text-align: center; }
-input, textarea { width: 100%; max-width: 600px; padding: 15px; background: #111; border: 1px solid #222; color: white; margin-bottom: 10px; }
-button { background: var(--gold); border: none; padding: 15px 50px; font-weight: 800; cursor: pointer; }
+/* Splash Screen [cite: 2026-01-22] */
+#splash-screen { position: fixed; top: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; justify-content: center; align-items: center; }
+#intro-video { width: 100%; max-width: 600px; }
