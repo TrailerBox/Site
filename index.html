@@ -3,61 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrailerBox Studio | Where Books Become Cinema</title>
-    <meta name="description" content="Premium cinematic book trailers for authors and publishers.">
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <title>TrailerBox Studios | Where Books Become Cinema</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TD1BDXCTG4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-TD1BDXCTG4');
     </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container nav-wrapper">
-            <div class="logo">TRAILERBOX <span>STUDIO</span></div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn-nav">Book a Consultation</a>
-            </nav>
-        </div>
-    </header>
+    <div id="splash-screen">
+        <video autoplay muted playsinline id="intro-video">
+            <source src="Intro.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1>Where books become <span>cinema.</span></h1>
-            <p>Premium cinematic book trailers crafted for authors and publishers who want their stories seen, felt, and taken seriously.</p>
-            <div class="hero-actions">
-                <a href="contact.html" class="btn-gold">Order a Book Trailer →</a>
-                <a href="[CALENDAR_LINK]" class="btn-outline">Book a Consultation</a>
+    <div id="main-site" style="opacity: 0; transition: opacity 1.5s ease;">
+        
+        <header class="studio-header">
+            <div class="logo-area">
+                <h1 class="logo-main">TRAILER <span class="box-text">BOX</span></h1>
+                <div class="gold-separator"></div>
+                <h2 class="logo-studios">STUDIOS</h2>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="intro section">
-        <div class="container small-container text-center">
-            <h2 class="serif">"We don't just promote. We interpret."</h2>
-            <p class="large-text">TrailerBox Studio is a story-first studio dedicated to transforming manuscripts into screen-ready visual experiences.</p>
-        </div>
-    </section>
+        <section class="hero">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="hero-background.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay">
+                <h3>WHERE BOOKS BECOME</h3>
+                <h2>CINEMA</h2>
+            </div>
+        </section>
 
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 TrailerBox Studio. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <section id="contact">
+            <div class="form-container">
+                <h2>START A PROJECT</h2>
+                <form action="https://formspree.io/f/mbdgjyan" method="POST">
+                    <input type="text" name="name" placeholder="Author Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="book_title" placeholder="Book Title" required>
+                    <textarea name="message" placeholder="Tell us about your story..."></textarea>
+                    <button type="submit">REQUEST A QUOTE</button>
+                </form>
+            </div>
+        </section>
 
+    </div>
+
+    <script>
+        const introVideo = document.getElementById('intro-video');
+        const splash = document.getElementById('splash-screen');
+        const mainSite = document.getElementById('main-site');
+
+        introVideo.onended = function() {
+            splash.style.opacity = '0';
+            setTimeout(() => {
+                splash.style.display = 'none';
+                mainSite.style.opacity = '1';
+            }, 1000);
+        };
+    </script>
 </body>
 </html>
