@@ -61,7 +61,6 @@
                 <h1 class="main-title">THE VAULT</h1>
                 <div class="header-line"></div>
             </div>
-
             <div class="trailer-slider">
                 <div class="trailer-card locked">
                     <div class="thumb-box placeholder-bg">
@@ -74,19 +73,6 @@
                     <h3>PROJECT ALPHA</h3>
                     <p>PREMIERE BOX TIER</p>
                 </div>
-
-                <div class="trailer-card locked">
-                    <div class="thumb-box placeholder-bg">
-                        <div class="status-overlay">
-                            <span class="tag">RESERVED</span>
-                            <p>EPIC FANTASY / SCIFI</p>
-                            <small>SCRIPTING PHASE</small>
-                        </div>
-                    </div>
-                    <h3>PROJECT BETA</h3>
-                    <p>CINEMA BOX TIER</p>
-                </div>
-
                 <div class="trailer-card active-slot">
                     <div class="thumb-box open-bg">
                         <div class="status-overlay gold-tint">
@@ -95,49 +81,15 @@
                             <a href="#contact" class="apply-link">APPLY FOR FEATURE</a>
                         </div>
                     </div>
-                    <h3>PROJECT GAMMA</h3>
+                    <h3>PROJECT BETA</h3>
                     <p>LAUNCH PARTNER SLOT</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="packages-section">
-            <div class="section-header">
-                <h2 class="gold-subtitle">FLAT RATE PRICING</h2>
-                <h1 class="main-title">THE BOXES</h1>
-                <div class="header-line"></div>
-            </div>
-            <div class="packages-grid">
-                <div class="package-card">
-                    <h3>TEASER <span>BOX</span></h3>
-                    <div class="price">$500</div>
-                    <p>15-20 Minutes</p>
-                    <a href="#contact" class="select-btn">SELECT</a>
-                </div>
-                <div class="package-card">
-                    <h3>STANDARD <span>BOX</span></h3>
-                    <div class="price">$1,170</div>
-                    <p>40-45 Minutes</p>
-                    <a href="#contact" class="select-btn">SELECT</a>
-                </div>
-                <div class="package-card featured">
-                    <h3>CINEMA <span>BOX</span></h3>
-                    <div class="price">$1,800</div>
-                    <p>60 Minutes</p>
-                    <a href="#contact" class="select-btn">SELECT</a>
-                </div>
-                <div class="package-card">
-                    <h3>PREMIERE <span>BOX</span></h3>
-                    <div class="price">$2,300</div>
-                    <p>80-85 Minutes</p>
-                    <a href="#contact" class="select-btn">SELECT</a>
                 </div>
             </div>
         </section>
 
         <section id="process" class="process-section">
             <div class="section-header">
-                <h2 class="gold-subtitle">HOW WE WORK</h2>
+                <h2 class="gold-subtitle">OUR METHOD</h2>
                 <h1 class="main-title">THE PROCESS</h1>
                 <div class="header-line"></div>
             </div>
@@ -145,4 +97,60 @@
                 <div class="process-box">
                     <div class="step-num">01</div>
                     <h3>ADAPTATION</h3>
-                    <p>We dive into your story to identify the core cinematic moments
+                    <p>We identify the core cinematic moments to reach honest reviewers. [cite: 2026-01-07]</p>
+                </div>
+                <div class="process-box">
+                    <div class="step-num">02</div>
+                    <h3>PRODUCTION</h3>
+                    <p>High-end visuals that bridge the gap to a loyal readership. [cite: 2026-01-07]</p>
+                </div>
+                <div class="process-box">
+                    <div class="step-num">03</div>
+                    <h3>PREMIERE</h3>
+                    <p>Direct exposure through professional word-of-mouth advocacy. [cite: 2026-01-07]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="form-wrapper">
+                <h2 class="gold-subtitle">READY TO START?</h2>
+                <h1 class="main-title">THE STUDIO DESK</h1>
+                <form action="https://formspree.io/f/mbdgjyan" method="POST">
+                    <input type="text" name="name" placeholder="Author Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Tell us about your book..."></textarea>
+                    <button type="submit">SUBMIT INQUIRY</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="studio-footer">
+            <div class="footer-content">
+                <div class="footer-logo">TRAILER <span class="nav-box">BOX</span> STUDIOS</div>
+                <p>Cinematic Book Trailers for the Modern Author.</p>
+                <div class="footer-line"></div>
+                <div class="copyright">&copy; 2026 TrailerBox Studios. All Rights Reserved.</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const video = document.getElementById('intro-video');
+        const splash = document.getElementById('splash-screen');
+        const main = document.getElementById('main-site');
+
+        // Logic 1: Transition on video end
+        video.onended = () => { splash.style.display = 'none'; main.style.display = 'block'; };
+
+        // Logic 2: SAFETY SWITCH [cite: 2026-01-22]
+        setTimeout(() => { 
+            if(main.style.display === 'none') { 
+                splash.style.display = 'none'; 
+                main.style.display = 'block'; 
+            } 
+        }, 4000); 
+    </script>
+</body>
+</html>
