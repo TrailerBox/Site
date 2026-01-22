@@ -11,7 +11,8 @@
       gtag('js', new Date());
       gtag('config', 'G-TD1BDXCTG4');
     </script>
-    <link rel="icon" type="image/png" href="favicon.png"> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +24,6 @@
     </div>
 
     <div id="main-site" style="display:none;">
-        
         <nav class="navbar">
             <div class="nav-logo">TRAILER <span class="nav-box">BOX</span></div>
             <ul class="nav-links">
@@ -48,7 +48,7 @@
                     <h2 class="cinema-italic">CINEMA</h2>
                 </div>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn-outline">VIEW PRODUCTION SLATE</a>
+                    <a href="#portfolio" class="btn-outline">WATCH TRAILERS</a>
                     <a href="#contact" class="btn-gold">GET A QUOTE</a>
                 </div>
             </div>
@@ -64,12 +64,12 @@
                 <div class="process-box">
                     <div class="step-num">01</div>
                     <h3>ADAPTATION</h3>
-                    <p>We identify cinematic moments that bridge the gap to a loyal readership. [cite: 2026-01-07]</p>
+                    <p>Identifying the core cinematic moments that bridge the gap to readers. [cite: 2026-01-07]</p>
                 </div>
                 <div class="process-box">
                     <div class="step-num">02</div>
                     <h3>PRODUCTION</h3>
-                    <p>High-end visuals crafted to encourage honest reviews on Amazon and Goodreads. [cite: 2026-01-07]</p>
+                    <p>High-end visuals crafted for honest reviews on Amazon and Goodreads. [cite: 2026-01-07]</p>
                 </div>
                 <div class="process-box">
                     <div class="step-num">03</div>
@@ -100,23 +100,15 @@
                 <div class="copyright">&copy; 2026 TrailerBox Studios. All Rights Reserved.</div>
             </div>
         </footer>
-
     </div>
 
     <script>
         const video = document.getElementById('intro-video');
         const splash = document.getElementById('splash-screen');
         const main = document.getElementById('main-site');
-
         video.onended = () => { splash.style.display = 'none'; main.style.display = 'block'; };
-
-        // Safety Switch: Force site to show after 4 seconds if video fails [cite: 2026-01-22]
-        setTimeout(() => { 
-            if(main.style.display === 'none') { 
-                splash.style.display = 'none'; 
-                main.style.display = 'block'; 
-            } 
-        }, 4000); 
+        // Safety switch [cite: 2026-01-22]
+        setTimeout(() => { if(main.style.display === 'none') { splash.style.display = 'none'; main.style.display = 'block'; } }, 4000); 
     </script>
 </body>
 </html>
