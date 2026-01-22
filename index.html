@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrailerBox Studios | Where Books Become Cinema</title>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TD1BDXCTG4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,11 +11,7 @@
       gtag('js', new Date());
       gtag('config', 'G-TD1BDXCTG4');
     </script>
-
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
-    
+    <link rel="icon" type="image/png" href="favicon.png"> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,53 +22,38 @@
         </video>
     </div>
 
-    <div id="main-site" style="opacity: 0; transition: opacity 1.5s ease;">
-        
-        <header class="studio-header">
-            <div class="logo-area">
-                <h1 class="logo-main">TRAILER <span class="box-text">BOX</span></h1>
-                <div class="gold-separator"></div>
-                <h2 class="logo-studios">STUDIOS</h2>
-            </div>
-        </header>
-
-        <section class="hero">
-            <video autoplay muted loop playsinline class="bg-video">
+    <div id="main-site" style="display:none;">
+        <section class="hero-container">
+            <video autoplay muted loop playsinline id="hero-bg">
                 <source src="hero-background.mp4" type="video/mp4">
             </video>
+
             <div class="hero-overlay">
-                <h3>WHERE BOOKS BECOME</h3>
-                <h2>CINEMA</h2>
+                <header class="studio-intro">
+                    <h1 class="logo-main">TRAILER <span class="box-text">BOX</span></h1>
+                    <div class="gold-line"></div>
+                    <h2 class="logo-studios">STUDIOS</h2>
+                </header>
+
+                <div class="hero-text">
+                    <h3>WHERE BOOKS BECOME</h3>
+                    <h2>CINEMA</h2>
+                </div>
+                
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn-outline">WATCH TRAILERS</a>
+                    <a href="#contact" class="btn-gold">GET A QUOTE</a>
+                </div>
             </div>
         </section>
-
-        <section id="contact">
-            <div class="form-container">
-                <h2>START A PROJECT</h2>
-                <form action="https://formspree.io/f/mbdgjyan" method="POST">
-                    <input type="text" name="name" placeholder="Author Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="text" name="book_title" placeholder="Book Title" required>
-                    <textarea name="message" placeholder="Tell us about your story..."></textarea>
-                    <button type="submit">REQUEST A QUOTE</button>
-                </form>
-            </div>
-        </section>
-
     </div>
 
     <script>
-        const introVideo = document.getElementById('intro-video');
+        const video = document.getElementById('intro-video');
         const splash = document.getElementById('splash-screen');
-        const mainSite = document.getElementById('main-site');
-
-        introVideo.onended = function() {
-            splash.style.opacity = '0';
-            setTimeout(() => {
-                splash.style.display = 'none';
-                mainSite.style.opacity = '1';
-            }, 1000);
-        };
+        const main = document.getElementById('main-site');
+        video.onended = () => { splash.style.display = 'none'; main.style.display = 'block'; };
+        setTimeout(() => { if(main.style.display === 'none') { splash.style.display = 'none'; main.style.display = 'block'; } }, 5000);
     </script>
 </body>
 </html>
