@@ -1,156 +1,36 @@
-/* GLOBAL STYLES */
-:root {
-    --gold: #c5a059;
-    --black: #0a0a0a;
-    --white: #ffffff;
+:root { --gold: #c5a059; --black: #0a0a0a; }
+
+body, html { margin: 0; padding: 0; background: var(--black); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+/* SPLASH SCREEN [cite: 2026-01-22] */
+#splash-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; display: flex; justify-content: center; align-items: center; }
+#intro-video { width: 100%; max-width: 800px; }
+
+/* HERO VIDEO SETUP [cite: 2026-01-22] */
+.hero-container { position: relative; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+
+#hero-bg {
+    position: absolute; top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    z-index: -1; transform: translate(-50%, -50%);
+    filter: brightness(25%) contrast(110%); /* Makes your video moody and professional */
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: var(--black);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
+/* BRANDING & LOGO [cite: 2026-01-18] */
+.hero-overlay { text-align: center; z-index: 10; }
+.logo-main { font-size: 3.5rem; letter-spacing: 10px; font-weight: 800; margin: 0; }
+.box-text { border: 3px solid var(--gold); padding: 0 15px; color: var(--gold); }
+.gold-line { width: 350px; height: 2px; background: var(--gold); margin: 20px auto; }
+.logo-studios { font-size: 1.2rem; letter-spacing: 18px; color: var(--gold); padding-left: 18px; text-transform: uppercase; }
 
-/* 1. SPLASH SCREEN */
-#splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 1s ease;
-}
+/* CINEMA TEXT [cite: 2026-01-22] */
+.hero-text h3 { font-size: 1rem; letter-spacing: 6px; font-weight: 300; margin-top: 60px; }
+.hero-text h2 { font-family: 'Playfair Display', serif; font-size: 6rem; color: var(--gold); font-style: italic; margin: -10px 0 0 0; }
 
-#intro-video {
-    width: 100%;
-    max-width: 800px;
-}
-
-/* 2. STUDIO INTRO BRANDING */
-.studio-header {
-    padding: 80px 20px 40px;
-    text-align: center;
-}
-
-.logo-main {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 8px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-/* The Box around "BOX" */
-.box-text {
-    border: 3px solid var(--gold);
-    padding: 2px 15px;
-    color: var(--gold);
-    display: inline-block;
-}
-
-/* The line below the Trailer Box */
-.gold-separator {
-    width: 350px;
-    height: 1.5px;
-    background-color: var(--gold);
-    margin: 20px auto;
-}
-
-/* Studio text written using code */
-.logo-studios {
-    font-size: 1.1rem;
-    letter-spacing: 16px;
-    color: var(--gold);
-    margin: 0;
-    text-transform: uppercase;
-    padding-left: 16px;
-}
-
-/* 3. HERO SECTION & BACKGROUND VIDEO */
-.hero {
-    position: relative;
-    height: 75vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    filter: brightness(35%); /* Darkens video for text clarity */
-}
-
-.hero-overlay h3 {
-    font-size: 1.2rem;
-    letter-spacing: 6px;
-    margin-bottom: 0;
-}
-
-.hero-overlay h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 5.5rem;
-    color: var(--gold);
-    font-style: italic;
-    margin-top: -10px;
-}
-
-/* 4. FORMSPREE CONTACT SECTION */
-#contact {
-    padding: 100px 20px;
-    background-color: #0f0f0f;
-    text-align: center;
-}
-
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact h2 {
-    letter-spacing: 4px;
-    color: var(--gold);
-    margin-bottom: 40px;
-}
-
-#contact form input, #contact form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    color: white;
-    box-sizing: border-box;
-}
-
-#contact button {
-    background-color: var(--gold);
-    color: black;
-    border: none;
-    padding: 15px 40px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#contact button:hover {
-    background-color: #fff;
-}
+/* BUTTONS [cite: 2026-01-22] */
+.hero-btns { margin-top: 40px; display: flex; gap: 20px; justify-content: center; }
+.btn-outline, .btn-gold { padding: 15px 40px; text-decoration: none; font-weight: 800; font-size: 0.9rem; letter-spacing: 2px; transition: 0.3s; }
+.btn-outline { border: 2px solid white; color: white; }
+.btn-gold { background: var(--gold); color: black; }
+.btn-gold:hover, .btn-outline:hover { background: white; color: black; border-color: white; }
