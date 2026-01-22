@@ -28,7 +28,6 @@
             <div class="nav-logo">TRAILER <span class="nav-box">BOX</span></div>
             <ul class="nav-links">
                 <li><a href="#portfolio">THE VAULT</a></li>
-                <li><a href="#services">PACKAGES</a></li>
                 <li><a href="#process">PROCESS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -55,38 +54,6 @@
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio-section">
-            <div class="section-header">
-                <h2 class="gold-subtitle">2026 PRODUCTION SLATE</h2>
-                <h1 class="main-title">THE VAULT</h1>
-                <div class="header-line"></div>
-            </div>
-            <div class="trailer-slider">
-                <div class="trailer-card locked">
-                    <div class="thumb-box placeholder-bg">
-                        <div class="status-overlay">
-                            <span class="tag">RESERVED</span>
-                            <p>THRILLER / MYSTERY</p>
-                            <small>IN PRE-PRODUCTION</small>
-                        </div>
-                    </div>
-                    <h3>PROJECT ALPHA</h3>
-                    <p>PREMIERE BOX TIER</p>
-                </div>
-                <div class="trailer-card active-slot">
-                    <div class="thumb-box open-bg">
-                        <div class="status-overlay gold-tint">
-                            <span class="tag gold-tag">OPEN SELECTION</span>
-                            <p>YOUR BOOK TITLE HERE</p>
-                            <a href="#contact" class="apply-link">APPLY FOR FEATURE</a>
-                        </div>
-                    </div>
-                    <h3>PROJECT BETA</h3>
-                    <p>LAUNCH PARTNER SLOT</p>
-                </div>
-            </div>
-        </section>
-
         <section id="process" class="process-section">
             <div class="section-header">
                 <h2 class="gold-subtitle">OUR METHOD</h2>
@@ -97,17 +64,17 @@
                 <div class="process-box">
                     <div class="step-num">01</div>
                     <h3>ADAPTATION</h3>
-                    <p>We identify the core cinematic moments to reach honest reviewers. [cite: 2026-01-07]</p>
+                    <p>We identify cinematic moments that bridge the gap to a loyal readership. [cite: 2026-01-07]</p>
                 </div>
                 <div class="process-box">
                     <div class="step-num">02</div>
                     <h3>PRODUCTION</h3>
-                    <p>High-end visuals that bridge the gap to a loyal readership. [cite: 2026-01-07]</p>
+                    <p>High-end visuals crafted to encourage honest reviews on Amazon and Goodreads. [cite: 2026-01-07]</p>
                 </div>
                 <div class="process-box">
                     <div class="step-num">03</div>
                     <h3>PREMIERE</h3>
-                    <p>Direct exposure through professional word-of-mouth advocacy. [cite: 2026-01-07]</p>
+                    <p>Direct exposure to an engaged community of word-of-mouth advocates. [cite: 2026-01-07]</p>
                 </div>
             </div>
         </section>
@@ -141,10 +108,9 @@
         const splash = document.getElementById('splash-screen');
         const main = document.getElementById('main-site');
 
-        // Logic 1: Transition on video end
         video.onended = () => { splash.style.display = 'none'; main.style.display = 'block'; };
 
-        // Logic 2: SAFETY SWITCH [cite: 2026-01-22]
+        // Safety Switch: Force site to show after 4 seconds if video fails [cite: 2026-01-22]
         setTimeout(() => { 
             if(main.style.display === 'none') { 
                 splash.style.display = 'none'; 
