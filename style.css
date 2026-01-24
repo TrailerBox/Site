@@ -1,29 +1,237 @@
-/* --- GLOBAL STYLES (Shared by all pages) --- */
-:root { --gold: #c5a059; --black: #0a0a0a; --white: #ffffff; }
-body, html { margin: 0; padding: 0; background: var(--black); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+/* --- 1. GLOBAL RESET & THEME --- */
+:root { 
+    --gold: #c5a059; 
+    --black: #0a0a0a; 
+    --dark-grey: #111;
+}
 
-.navbar { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 25px 50px; z-index: 100; box-sizing: border-box; background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent); }
-.nav-box { border: 1px solid var(--gold); padding: 0 5px; color: var(--gold); }
-.nav-links { list-style: none; display: flex; gap: 30px; }
-.nav-links a { text-decoration: none; color: white; font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; transition: 0.3s; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-.studio-footer { padding: 80px 50px; text-align: center; border-top: 1px solid #111; margin-top: 100px; }
-.footer-line { width: 60px; height: 1px; background: #333; margin: 25px auto; }
-.copyright { font-size: 0.7rem; color: #444; letter-spacing: 1px; }
+body, html { 
+    background: var(--black); 
+    color: white; 
+    font-family: 'Inter', sans-serif; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth;
+}
 
-/* --- HOME PAGE STYLES --- */
-.hero-header { position: relative; height: 80vh; display: flex; justify-content: center; align-items: center; text-align: center; }
-.hero-bg-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(35%); }
-.logo-text { font-size: 3.5rem; letter-spacing: 12px; margin: 0; font-weight: 800; }
-.box-frame { border: 4px solid var(--gold); padding: 5px 20px; color: var(--gold); }
-.separator-line { width: 450px; height: 1.5px; background: var(--gold); margin: 25px auto; }
-.studios-label { font-size: 1.2rem; letter-spacing: 22px; color: var(--gold); padding-left: 22px; }
+/* --- 2. FULL-SCREEN SPLASH SCREEN --- */
+#splash-screen { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background: #000; 
+    z-index: 10000; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
 
-/* --- PORTFOLIO PAGE STYLES (Exclusive to Portfolio) --- */
-.portfolio-container { padding: 160px 50px 100px; max-width: 1200px; margin: 0 auto; text-align: center; }
-.slate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 60px; }
-.slate-card { background: #0f0f0f; border: 1px solid #1a1a1a; transition: 0.4s ease; text-align: left; }
-.slate-card:hover { border-color: var(--gold); transform: translateY(-10px); }
-.slate-preview { width: 100%; aspect-ratio: 16/9; background: #050505; display: flex; justify-content: center; align-items: center; position: relative; }
-.status-badge { position: absolute; top: 15px; left: 15px; font-size: 0.6rem; letter-spacing: 2px; background: #222; padding: 5px 10px; color: #888; }
-.gold-badge { background: var(--gold); color: black; font-weight: 800; }
+#intro-video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* --- 3. GLOBAL NAVIGATION --- */
+.navbar { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 25px 5%; 
+    z-index: 100; 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent); 
+}
+
+.nav-logo { 
+    font-weight: 800; 
+    letter-spacing: 2px; 
+    font-size: 1rem; 
+}
+
+.nav-box { 
+    border: 1px solid var(--gold); 
+    padding: 0 5px; 
+    color: var(--gold); 
+}
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: white; 
+    font-size: 0.75rem; 
+    letter-spacing: 2px; 
+    font-weight: 800; 
+    transition: 0.3s;
+}
+
+.nav-links a:hover { 
+    color: var(--gold); 
+}
+
+/* --- 4. HOME PAGE HERO (IMAGE) --- */
+.hero-header { 
+    position: relative; 
+    height: 80vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.hero-bg-image { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1; 
+    filter: brightness(30%); 
+}
+
+.logo-text { 
+    font-size: 3rem; 
+    letter-spacing: 10px; 
+    font-weight: 800; 
+}
+
+.box-frame { 
+    border: 4px solid var(--gold); 
+    padding: 5px 20px; 
+    color: var(--gold); 
+}
+
+.separator-line { 
+    width: 300px; 
+    height: 1.5px; 
+    background: var(--gold); 
+    margin: 25px auto; 
+}
+
+.studios-label { 
+    font-size: 1rem; 
+    letter-spacing: 20px; 
+    color: var(--gold); 
+    font-weight: 400; 
+}
+
+/* --- 5. NETFLIX-STYLE SLIDER (HOME PAGE) --- */
+.slider-section { 
+    padding: 50px 0 50px 5%; 
+}
+
+.slider-title { 
+    font-size: 0.8rem; 
+    letter-spacing: 3px; 
+    color: var(--gold); 
+    margin-bottom: 20px; 
+}
+
+.netflix-slider { 
+    display: flex; 
+    gap: 15px; 
+    overflow-x: auto; 
+    scrollbar-width: none; 
+}
+
+.netflix-slider::-webkit-scrollbar { 
+    display: none; 
+}
+
+.trailer-card { 
+    min-width: 300px; 
+    aspect-ratio: 16/9; 
+    background: var(--dark-grey); 
+    border: 1px solid #222; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: 0.4s; 
+}
+
+.trailer-card:hover { 
+    transform: scale(1.05); 
+    border-color: var(--gold); 
+}
+
+/* --- 6. PROCESS SECTION (HOME PAGE) --- */
+.home-process { 
+    padding: 100px 5%; 
+    background: #050505; 
+}
+
+.main-title { 
+    font-size: 2rem; 
+    letter-spacing: 5px; 
+    margin-bottom: 40px; 
+}
+
+.process-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
+}
+
+.process-box { 
+    border-bottom: 2px solid #1a1a1a; 
+    padding-bottom: 30px; 
+}
+
+.gold-subtitle { 
+    color: var(--gold); 
+    font-size: 0.75rem; 
+    letter-spacing: 5px; 
+}
+
+/* --- 7. PORTFOLIO SLATE (PORTFOLIO PAGE) --- */
+.portfolio-container { 
+    padding: 150px 5% 100px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.slate-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px; 
+    margin-top: 60px; 
+}
+
+.slate-card { 
+    background: #0f0f0f; 
+    border: 1px solid #1a1a1a; 
+    transition: 0.4s ease; 
+}
+
+.slate-preview { 
+    width: 100%; 
+    aspect-ratio: 16/9; 
+    background: #050505; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.slate-info { 
+    padding: 25px; 
+}
+
+/* --- 8. ORDER & CONTACT PAGES --- */
+.order-container, .contact-container { 
+    padding: 150px 5% 100px; 
+    max-width: 900px; 
+    margin:
