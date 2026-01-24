@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrailerBox Studios | Where Books Become Cinema</title>
+
+    <meta name="description" content="Premium cinematic book trailers for authors. We bridge the gap between your story and a loyal readership.">
+    <meta property="og:title" content="TrailerBox Studios | Where Books Become Cinema">
+    <meta property="og:description" content="Transforming stories into cinematic experiences. Feature your book in our production slate.">
+    <meta property="og:image" content="meta-image.png">
+    <meta property="og:url" content="https://trailerbox.github.io/Site/">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TD1BDXCTG4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,8 +18,8 @@
       gtag('js', new Date());
       gtag('config', 'G-TD1BDXCTG4');
     </script>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="favicon.png"> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,16 +31,18 @@
     </div>
 
     <div id="main-site" style="display:none;">
+        
         <nav class="navbar">
             <div class="nav-logo">TRAILER <span class="nav-box">BOX</span></div>
             <ul class="nav-links">
-                <li><a href="#portfolio">THE VAULT</a></li>
-                <li><a href="#process">PROCESS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
 
-        <section class="hero-full">
+        <section class="hero-header">
             <video autoplay muted loop playsinline class="hero-bg-video">
                 <source src="hero-background.mp4" type="video/mp4">
             </video>
@@ -43,18 +52,31 @@
                     <div class="separator-line"></div>
                     <h2 class="studios-label">STUDIOS</h2>
                 </header>
-                <div class="headline-box">
-                    <h3>WHERE BOOKS BECOME</h3>
-                    <h2 class="cinema-italic">CINEMA</h2>
-                </div>
-                <div class="hero-btns">
-                    <a href="#portfolio" class="btn-outline">WATCH TRAILERS</a>
-                    <a href="#contact" class="btn-gold">GET A QUOTE</a>
+                <div class="hero-subtitle">
+                    <p class="cinema-italic">Where Books Become Cinema</p>
                 </div>
             </div>
         </section>
 
-        <section id="process" class="process-section">
+        <section class="slider-section">
+            <h2 class="slider-title">LATEST PRODUCTIONS</h2>
+            <div class="netflix-slider">
+                <div class="trailer-card">
+                    <div class="card-placeholder"><span>PROJECT ALPHA <br><small>RESERVED</small></span></div>
+                </div>
+                <div class="trailer-card">
+                    <div class="card-placeholder"><span>PROJECT BETA <br><small>IN PRODUCTION</small></span></div>
+                </div>
+                <div class="trailer-card active-slot">
+                    <div class="card-placeholder"><span>OPEN SELECTION <br><small>APPLY NOW</small></span></div>
+                </div>
+                <div class="trailer-card">
+                    <div class="card-placeholder"><span>PROJECT GAMMA <br><small>COMING SOON</small></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-process">
             <div class="section-header">
                 <h2 class="gold-subtitle">OUR METHOD</h2>
                 <h1 class="main-title">THE PROCESS</h1>
@@ -62,43 +84,24 @@
             </div>
             <div class="process-grid">
                 <div class="process-box">
-                    <div class="step-num">01</div>
-                    <h3>ADAPTATION</h3>
-                    <p>Identifying the core cinematic moments that bridge the gap to readers. [cite: 2026-01-07]</p>
+                    <h3>01. ADAPTATION</h3>
+                    <p>Identifying cinematic moments that bridge the gap to a loyal readership.</p>
                 </div>
                 <div class="process-box">
-                    <div class="step-num">02</div>
-                    <h3>PRODUCTION</h3>
-                    <p>High-end visuals crafted for honest reviews on Amazon and Goodreads. [cite: 2026-01-07]</p>
+                    <h3>02. PRODUCTION</h3>
+                    <p>High-end visuals crafted to encourage honest reviews on Amazon and Goodreads.</p>
                 </div>
                 <div class="process-box">
-                    <div class="step-num">03</div>
-                    <h3>PREMIERE</h3>
-                    <p>Direct exposure to an engaged community of word-of-mouth advocates. [cite: 2026-01-07]</p>
+                    <h3>03. PREMIERE</h3>
+                    <p>Direct exposure to an engaged community of word-of-mouth advocates.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="form-wrapper">
-                <h2 class="gold-subtitle">READY TO START?</h2>
-                <h1 class="main-title">THE STUDIO DESK</h1>
-                <form action="https://formspree.io/f/mbdgjyan" method="POST">
-                    <input type="text" name="name" placeholder="Author Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <textarea name="message" placeholder="Tell us about your book..."></textarea>
-                    <button type="submit">SUBMIT INQUIRY</button>
-                </form>
             </div>
         </section>
 
         <footer class="studio-footer">
-            <div class="footer-content">
-                <div class="footer-logo">TRAILER <span class="nav-box">BOX</span> STUDIOS</div>
-                <p>Cinematic Book Trailers for the Modern Author.</p>
-                <div class="footer-line"></div>
-                <div class="copyright">&copy; 2026 TrailerBox Studios. All Rights Reserved.</div>
-            </div>
+            <div class="footer-logo">TRAILER <span class="nav-box">BOX</span> STUDIOS</div>
+            <div class="footer-line"></div>
+            <p class="copyright">&copy; 2026 TrailerBox Studios. All Rights Reserved.</p>
         </footer>
     </div>
 
@@ -106,9 +109,18 @@
         const video = document.getElementById('intro-video');
         const splash = document.getElementById('splash-screen');
         const main = document.getElementById('main-site');
-        video.onended = () => { splash.style.display = 'none'; main.style.display = 'block'; };
-        // Safety switch [cite: 2026-01-22]
-        setTimeout(() => { if(main.style.display === 'none') { splash.style.display = 'none'; main.style.display = 'block'; } }, 4000); 
+
+        video.onended = () => { 
+            splash.style.display = 'none'; 
+            main.style.display = 'block'; 
+        };
+
+        setTimeout(() => { 
+            if(main.style.display === 'none') { 
+                splash.style.display = 'none'; 
+                main.style.display = 'block'; 
+            } 
+        }, 4000); 
     </script>
 </body>
 </html>
