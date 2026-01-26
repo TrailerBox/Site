@@ -1,4 +1,4 @@
-/* --- 1. GLOBAL RESET & THEME --- */
+/* --- 1. GLOBAL RESET & THEME [cite: 2026-01-22] --- */
 :root { 
     --gold: #c5a059; 
     --black: #0a0a0a; 
@@ -19,7 +19,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* --- 2. FULL-SCREEN SPLASH SCREEN --- */
+/* --- 2. FULL-SCREEN SPLASH SCREEN [cite: 2026-01-22] --- */
 #splash-screen { 
     position: fixed; 
     top: 0; 
@@ -39,7 +39,7 @@ body, html {
     object-fit: cover; 
 }
 
-/* --- 3. GLOBAL NAVIGATION --- */
+/* --- 3. GLOBAL NAVIGATION [cite: 2026-01-22] --- */
 .navbar { 
     position: fixed; 
     top: 0; 
@@ -82,7 +82,7 @@ body, html {
     color: var(--gold); 
 }
 
-/* --- 4. HOME PAGE HERO (IMAGE) --- */
+/* --- 4. HOME PAGE HERO (IMAGE) [cite: 2026-01-18, 2026-01-22] --- */
 .hero-header { 
     position: relative; 
     height: 80vh; 
@@ -129,7 +129,7 @@ body, html {
     font-weight: 400; 
 }
 
-/* --- 5. NETFLIX-STYLE SLIDER (HOME PAGE) --- */
+/* --- 5. NETFLIX-STYLE SLIDER (HOME PAGE) [cite: 2026-01-18] --- */
 .slider-section { 
     padding: 50px 0 50px 5%; 
 }
@@ -168,7 +168,7 @@ body, html {
     border-color: var(--gold); 
 }
 
-/* --- 6. PROCESS SECTION (HOME PAGE) --- */
+/* --- 6. PROCESS SECTION (HOME PAGE) [cite: 2026-01-07, 2026-01-18, 2026-01-22] --- */
 .home-process { 
     padding: 100px 5%; 
     background: #050505; 
@@ -197,7 +197,7 @@ body, html {
     letter-spacing: 5px; 
 }
 
-/* --- 7. PORTFOLIO SLATE (PORTFOLIO PAGE) --- */
+/* --- 7. PORTFOLIO SLATE (PORTFOLIO PAGE) [cite: 2026-01-18, 2026-01-22] --- */
 .portfolio-container { 
     padding: 150px 5% 100px; 
     max-width: 1200px; 
@@ -230,8 +230,89 @@ body, html {
     padding: 25px; 
 }
 
-/* --- 8. ORDER & CONTACT PAGES --- */
+/* --- 8. ORDER & CONTACT PAGES [cite: 2026-01-22] --- */
 .order-container, .contact-container { 
     padding: 150px 5% 100px; 
     max-width: 900px; 
-    margin:
+    margin: 0 auto; 
+}
+
+.packages-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.package-box { 
+    background: #0a0a0a; 
+    border: 1px solid #1a1a1a; 
+    padding: 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    transition: 0.3s;
+}
+
+.package-box:hover { 
+    border-color: var(--gold); 
+}
+
+.order-btn { 
+    border: 1px solid var(--gold); 
+    color: var(--gold); 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    font-weight: 800; 
+    font-size: 0.7rem;
+}
+
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.contact-form input, .contact-form textarea { 
+    background: #111; 
+    border: 1px solid #222; 
+    color: white; 
+    padding: 20px; 
+}
+
+.submit-btn { 
+    background: var(--gold); 
+    color: black; 
+    padding: 20px; 
+    font-weight: 800; 
+    border: none; 
+    cursor: pointer;
+}
+
+/* --- 9. GLOBAL FOOTER [cite: 2026-01-22] --- */
+.studio-footer { 
+    padding: 80px 5%; 
+    text-align: center; 
+    border-top: 1px solid #111; 
+}
+
+.footer-line { 
+    width: 50px; 
+    height: 1px; 
+    background: #333; 
+    margin: 30px auto; 
+}
+
+.copyright { 
+    font-size: 0.7rem; 
+    color: #444; 
+    letter-spacing: 1px; 
+}
+
+/* --- 10. RESPONSIVE MEDIA QUERIES [cite: 2026-01-22] --- */
+@media (max-width: 768px) {
+    .logo-text { font-size: 2rem; letter-spacing: 5px; }
+    .studios-label { font-size: 0.8rem; letter-spacing: 10px; }
+    .package-box { flex-direction: column; text-align: center; gap: 20px; }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 0.6rem; }
+}
